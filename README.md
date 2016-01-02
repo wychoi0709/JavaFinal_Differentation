@@ -1,9 +1,4 @@
-#include <stdio.h>
-
-dddddddd
-
-쩐다!!!!!!
+﻿#PROJECT_DIFFERENTATION
 
 
 
-바꿀거야~ 
