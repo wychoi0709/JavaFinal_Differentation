@@ -32,5 +32,17 @@ public class Student extends Customer{
 	public ArrayList<Integer> getBusySeason() {
 		return busySeason;
 	}
+	
+	@Override
+	public boolean getRequestOfLecture() {
+		// TODO Auto-generated method stub
+		return requestOfLecture;
+	}
 
+	@Override
+	public String getidentity() {
+		// TODO Auto-generated method stub
+		return identity;
+	}
+	
 }

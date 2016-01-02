@@ -1,5 +1,11 @@
 package differentation;
 
+import java.util.ArrayList;
+
+import customer.Customer;
+import logger.DifferLogger;
+import sky.Providence;
+
 public class Differentation {
 
 
@@ -20,10 +26,15 @@ public class Differentation {
 	
 	//필요한 변수들 선언 START
 	private int reputationForIndividual;//개인고객(재학생, 휴학생, 일반인)에 대한 명성
-	private int getReputationForOrganization;//기관고객(기업, 학교)에 대한 명성
+	private int reputationForOrganization;//기관고객(기업, 학교)에 대한 명성
 	
 	private int totalRevenue;//총 수입
 	private int totalInvestedTime;//총 투자 시간
+	
+	public ArrayList<Customer> customerOfDifferentation = new ArrayList<Customer>();//디퍼런테이션 고객 리스트
+	private int requestOfLectureFromIndividual;
+	private int requestOfLectureFromUniversity;
+	private int requestOfLectureFromCompany;
 	//필요한 변수들 선언 END
 	
 	
@@ -31,16 +42,17 @@ public class Differentation {
 	public int getReputationForIndividual() {
 		return reputationForIndividual;
 	}
+	
 	public void setReputationForIndividual(int reputationForIndividual) {
 		this.reputationForIndividual = reputationForIndividual;
 	}
 
 	public int getReputationForOrganization() {
-		return getReputationForOrganization;
+		return reputationForOrganization;
 	}
 
 	public void setReputationForOrganization(int reputationForOrganization) {
-		this.getReputationForOrganization = reputationForOrganization;
+		this.reputationForOrganization = reputationForOrganization;
 	}
 
 	public int getTotalRevenue() {
@@ -58,10 +70,81 @@ public class Differentation {
 	public void setTotalInvestedTime(int totalInvestedTime) {
 		this.totalInvestedTime = totalInvestedTime;
 	}
+	
+	public int getRequestOfLectureFromIndividual() {
+		return requestOfLectureFromIndividual;
+	}
+
+	public int getRequestOfLectureFromUniversity() {
+		return requestOfLectureFromUniversity;
+	}
+
+	public int getRequestOfLectureFromCompany() {
+		return requestOfLectureFromCompany;
+	}
+	
 	//Getter, Setter 선언 END
 
+
+
+	public void setRequestNumberOfLecture() {
+		DifferLogger differLogger = DifferLogger.getLogger();
+		
+		differLogger.fine("Start setRequestOfLecture()");
+		int requestOfLectureFromIndividual = 0;
+		int requestOfLectureFromCompany = 0;
+		int requestOfLectureFromUniversity = 0;
+		
+		for(int i = 0; i < customerOfDifferentation.size(); i++){
+			
+			//개인인지, 기업인지, 학교인지 파악해서 각각 해당하는 request 값을 하나씩 올려줄 것 START
+			if(customerOfDifferentation.get(i).getidentity()=="Student"||customerOfDifferentation.get(i).getidentity()=="GeneralIndividual"){
+				requestOfLectureFromIndividual++;
+			}else if(customerOfDifferentation.get(i).getidentity()=="Company"){
+				requestOfLectureFromCompany++;
+			}else if(customerOfDifferentation.get(i).getidentity()=="University"){
+				requestOfLectureFromUniversity++;
+			}
+			//개인인지, 기업인지, 학교인지 파악해서 각각 해당하는 request 값을 하나씩 올려줄 것 END
+		}
+		
+		differLogger.fine("Requests of lecture from individuals: "+ requestOfLectureFromIndividual);
+		differLogger.fine("Requests of lecture from companies: "+ requestOfLectureFromCompany);
+		differLogger.fine("Requests of lecture from universities: "+ requestOfLectureFromUniversity);
+		
+		this.requestOfLectureFromIndividual = requestOfLectureFromIndividual;
+		this.requestOfLectureFromCompany = requestOfLectureFromCompany;
+		this.requestOfLectureFromUniversity = requestOfLectureFromUniversity;
+		
+		differLogger.fine("End setRequestOfLecture()");
+	}
+
+	public void brandMarketing(){
+		Providence providence = Providence.getInstance();
+		//브랜드 마케팅은 개인명성을 3번 증가시키고, 기업명성을 1번 증가시킨다 START
+		reputationForIndividual = providence.bestowReputation(reputationForIndividual);
+		reputationForIndividual = providence.bestowReputation(reputationForIndividual);
+		reputationForIndividual = providence.bestowReputation(reputationForIndividual);
+		reputationForOrganization = providence.bestowReputation(reputationForOrganization);
+		//브랜드 마케팅은 개인명성을 3번 증가시키고, 기업명성을 1번 증가시킨다 END
+	}
 	
+	public void promotionOfLecture(){
+		
+	}
 	
+	public void doLectureOfIndividual(){
+		
+	}
 	
+	public void doLectureOfCompany(){
+		
+	}
+	
+	public void doLectureOfUniversity(){
+		
+	}
+
+
 	
 }
