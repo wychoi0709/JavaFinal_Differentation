@@ -1,8 +1,2 @@
-12월 31, 2015 9:00:36 오전 logger.DifferLogger fine
+1월 02, 2016 9:56:11 오후 logger.DifferLogger fine
 미세: START main()
-12월 31, 2015 9:00:37 오전 logger.DifferLogger fine
-미세: START printCurrentState()
-12월 31, 2015 9:00:37 오전 logger.DifferLogger fine
-미세: END printCurrentState()
-12월 31, 2015 9:00:37 오전 logger.DifferLogger fine
-미세: END main()

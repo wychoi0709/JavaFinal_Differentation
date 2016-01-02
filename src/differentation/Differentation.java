@@ -122,14 +122,15 @@ public class Differentation {
 	public void brandMarketing(){
 		Providence providence = Providence.getInstance();
 		//브랜드 마케팅은 개인명성을 3번 증가시키고, 기업명성을 1번 증가시킨다 START
-		reputationForIndividual = providence.bestowReputation(reputationForIndividual);
-		reputationForIndividual = providence.bestowReputation(reputationForIndividual);
-		reputationForIndividual = providence.bestowReputation(reputationForIndividual);
-		reputationForOrganization = providence.bestowReputation(reputationForOrganization);
+		reputationForIndividual = providence.bestowIncrementOfReputation(reputationForIndividual);
+		reputationForIndividual = providence.bestowIncrementOfReputation(reputationForIndividual);
+		reputationForIndividual = providence.bestowIncrementOfReputation(reputationForIndividual);
+		reputationForOrganization = providence.bestowIncrementOfReputation(reputationForOrganization);
 		//브랜드 마케팅은 개인명성을 3번 증가시키고, 기업명성을 1번 증가시킨다 END
 	}
 	
 	public void promotionOfLecture(){
+		//properties 파일에서 개인강의요청 여부의 기준(평균, 표준편차)을 불러와서 변화시킬 것(기준을 낮출 것)
 		
 	}
 	

@@ -2,6 +2,7 @@ package startSimulation;
 
 import java.util.Scanner;
 
+
 import differentation.Differentation;
 import logger.DifferLogger;
 import sky.Providence;
@@ -16,10 +17,17 @@ public class StartSimulation {
 		DifferLogger logger = DifferLogger.getLogger();
 		Scanner s = new Scanner(System.in);
 		
-		
+
 		logger.fine("START main()");
-		
+
 		PrintText.printStart();//시작 텍스트 출력
+		
+		//정규분포 쓰는 방법!!!!!!!!!!
+//		NormalDistribution nd = new NormalDistribution(100, 25);
+//		double ii  = nd.sample();
+//		System.out.println(ii);
+		
+		
 		int commendNum = s.nextInt();//1은 계속, 2는 종료
 		
 		while(commendNum != 1&&commendNum != 2){
