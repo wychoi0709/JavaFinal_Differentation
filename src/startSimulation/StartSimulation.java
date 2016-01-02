@@ -43,6 +43,8 @@ public class StartSimulation {
 		PrintText.printCurrentState();
 		PrintText.printInputCommendText();//명령받는 텍스트 출력
 		
+		
+		s.close();
 		logger.fine("END main()");
 		
 	}
