@@ -68,7 +68,7 @@ public class Differentation {
 	}
 
 	public void setTotalInvestedTime(int totalInvestedTime) {
-		this.totalInvestedTime = totalInvestedTime;
+		this.totalInvestedTime += totalInvestedTime;
 	}
 	
 	public int getRequestOfLectureFromIndividual() {
@@ -120,34 +120,33 @@ public class Differentation {
 	}
 
 	public void brandMarketing(){
-		Providence providence = Providence.getInstance();
-		//브랜드 마케팅은 개인명성을 3번 증가시키고, 기업명성을 1번 증가시킨다 START
-		reputationForIndividual = providence.bestowIncrementOfReputation(reputationForIndividual);
-		reputationForIndividual = providence.bestowIncrementOfReputation(reputationForIndividual);
-		reputationForIndividual = providence.bestowIncrementOfReputation(reputationForIndividual);
-		reputationForOrganization = providence.bestowIncrementOfReputation(reputationForOrganization);
-		//브랜드 마케팅은 개인명성을 3번 증가시키고, 기업명성을 1번 증가시킨다 END
+		BrandMarketing brandMarketing = new BrandMarketing(new MarketingBuzz());
+		brandMarketing.doAction();
 	}
 	
 	public void promotionOfLecture(){
-		//properties 파일에서 개인강의요청 여부의 기준(평균, 표준편차)을 불러와서 변화시킬 것(기준을 낮출 것)
-		
+		PromotionOfLecture promotionOfLecture = new PromotionOfLecture(new MarketingBuzz());
+		promotionOfLecture.doAction();
 	}
 	
 	public void doLectureOfIndividual(){
-		
+		DoLectureOfIndividual doLectureOfIndividual = new DoLectureOfIndividual(new MarketingBuzz());
+		doLectureOfIndividual.doAction();
 	}
 	
 	public void doLectureOfCompany(){
-		
+		DoLectureOfCompany doLectureOfCompany = new DoLectureOfCompany(new MarketingBuzz());
+		doLectureOfCompany.doAction();
 	}
 	
 	public void doLectureOfUniversity(){
-		
+		DoLectureOfUniversity doLectureOfUniversity = new DoLectureOfUniversity(new MarketingBuzz());
+		doLectureOfUniversity.doAction();
 	}
 
 	public void coursePromotion() {
-		// TODO Auto-generated method stub
+		CoursePromotion coursePromotion = new CoursePromotion(new MarketingBuzz());
+		coursePromotion.doAction();
 		
 	}
 

@@ -13,7 +13,6 @@ public class StartSimulation {
 	public static void main(String[] args) {
 		
 		Differentation differentation = Differentation.getInstance();//디퍼런테이션 기업 생성
-		Providence providence = Providence.getInstance();//하늘의 뜻 생성
 		DifferLogger logger = DifferLogger.getLogger();
 		Scanner s = new Scanner(System.in);
 		
@@ -51,8 +50,8 @@ public class StartSimulation {
 		PrintText.printCurrentState();
 		PrintText.printInputCommendText();//명령받는 텍스트 출력
 		
-		commendNum=0;
-		while(commendNum != 6){
+		commendNum=-1;
+		while(commendNum != 0){
 			commendNum = s.nextInt();
 			if(commendNum == 1){
 				differentation.brandMarketing();

@@ -40,7 +40,7 @@ public class PrintText {
 		System.out.println("|||   3.Teach Individuals         |||");
 		System.out.println("|||   4.Teach in Company          |||");
 		System.out.println("|||   5.Teach in University       |||");
-		System.out.println("|||   6.End This Simulation       |||");
+		System.out.println("|||   0.End This Simulation       |||");
 		System.out.println("|||                               |||");
 		System.out.println("=====================================");//'=' 33°³
 		System.out.println(" ");
@@ -122,12 +122,13 @@ public class PrintText {
 		System.out.println("=====================================");//'=' 33°³
 		System.out.println("");
 		System.out.print(" A. Reputation for individual: " + differentation.getReputationForIndividual());
-		System.out.println("   B. Reputation for organization: " + differentation.getReputationForOrganization());
+		System.out.println("        B. Reputation for organization: " + differentation.getReputationForOrganization());
 		System.out.print(" C. Total revenue: " + differentation.getTotalRevenue() + " Won");
-		System.out.println("   D. Total invested time: " + differentation.getTotalInvestedTime());
+		System.out.println("                D. Total invested time: " + differentation.getTotalInvestedTime());
 		System.out.print(" E. Total Request from individuals: " + differentation.getRequestOfLectureFromIndividual());
 		System.out.println("   F. Total Request from companies: " + differentation.getRequestOfLectureFromCompany());
 		System.out.print(" G. Total Request from universities: " + differentation.getRequestOfLectureFromUniversity());
+		System.out.println("");
 		System.out.println("");
 		System.out.println(" ¡Ú Hourly earnings: " + hourlyEarnings + " Won/Hour");
 		System.out.println("");
