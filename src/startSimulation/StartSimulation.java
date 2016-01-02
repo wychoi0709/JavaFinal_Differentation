@@ -51,7 +51,26 @@ public class StartSimulation {
 		PrintText.printCurrentState();
 		PrintText.printInputCommendText();//명령받는 텍스트 출력
 		
+		commendNum=0;
+		while(commendNum != 6){
+			commendNum = s.nextInt();
+			if(commendNum == 1){
+				differentation.brandMarketing();
+			}else if(commendNum == 2){
+				differentation.coursePromotion();
+			}else if(commendNum == 3){
+				differentation.doLectureOfIndividual();
+			}else if(commendNum == 4){
+				differentation.doLectureOfCompany();
+			}else if(commendNum == 5){
+				differentation.doLectureOfUniversity();
+			}
+			PrintText.clearScreen();
+			PrintText.printCurrentState();
+			PrintText.printInputCommendText();//명령받는 텍스트 출력
+		}
 		
+		PrintText.printEnd();
 		s.close();
 		logger.fine("END main()");
 		

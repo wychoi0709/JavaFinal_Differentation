@@ -40,6 +40,7 @@ public class PrintText {
 		System.out.println("|||   3.Teach Individuals         |||");
 		System.out.println("|||   4.Teach in Company          |||");
 		System.out.println("|||   5.Teach in University       |||");
+		System.out.println("|||   6.End This Simulation       |||");
 		System.out.println("|||                               |||");
 		System.out.println("=====================================");//'=' 33°³
 		System.out.println(" ");

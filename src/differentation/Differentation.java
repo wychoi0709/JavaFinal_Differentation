@@ -146,6 +146,11 @@ public class Differentation {
 		
 	}
 
+	public void coursePromotion() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 	
 }

@@ -129,10 +129,6 @@ public class Providence {
 		
 		differLogger.fine("END bestowIncrementOfReputation()");
 		
-		
-		//얼마나 랜덤하게 증가시켜야 할까?
-		
-		
 		return reputation;
 	}
 }

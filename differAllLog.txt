@@ -1,2 +1,1150 @@
-1월 02, 2016 9:56:11 오후 logger.DifferLogger fine
+1월 03, 2016 12:05:34 오전 logger.DifferLogger fine
 미세: START main()
+1월 03, 2016 12:05:36 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:05:36 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:05:36 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:05:36 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:05:36 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:05:36 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:05:36 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Total reputation: 70
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Total reputation: 171
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Total reputation: 322
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Total reputation: 111
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:05:56 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Total reputation: 502
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Total reputation: 552
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Total reputation: 625
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Total reputation: 214
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:05:59 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Total reputation: 719
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Total reputation: 821
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Total reputation: 916
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Total reputation: 357
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:01 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Total reputation: 1010
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Total reputation: 1117
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Total reputation: 1168
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Total reputation: 485
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:02 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Total reputation: 1256
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Total reputation: 1361
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Total reputation: 1474
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Total reputation: 557
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:03 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Total reputation: 1573
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Total reputation: 1672
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Total reputation: 1782
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Total reputation: 662
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:04 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Total reputation: 1931
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Total reputation: 2050
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Total reputation: 2172
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Total reputation: 798
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Total reputation: 2260
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Total reputation: 2361
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Total reputation: 2441
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Total reputation: 928
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:05 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Total reputation: 2524
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Total reputation: 2605
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Total reputation: 2689
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Total reputation: 1009
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:06 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Total reputation: 2813
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Total reputation: 2895
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Total reputation: 2995
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Total reputation: 1131
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Total reputation: 3119
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Total reputation: 3209
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Total reputation: 3314
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Total reputation: 1235
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:07 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Total reputation: 3395
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Total reputation: 3519
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Total reputation: 3605
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Total reputation: 1331
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Total reputation: 3716
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Total reputation: 3819
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Total reputation: 3935
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Total reputation: 1397
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:08 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Total reputation: 4013
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Total reputation: 4100
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Total reputation: 4186
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Total reputation: 1484
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Total reputation: 4252
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Total reputation: 4331
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Total reputation: 4434
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Total reputation: 1557
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:09 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 4556
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 4618
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 4709
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 1645
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 4815
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 4940
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 5054
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 1768
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 5195
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 5301
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 5428
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Total reputation: 1858
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:10 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 5551
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 5641
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 5717
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 1943
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 5811
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 5877
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 5936
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 2009
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END printCurrentState()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 6026
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 6092
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 6193
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Average amount of reputation: 100.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Stdev amount of reputation: 25.0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Total reputation: 2131
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END bestowIncrementOfReputation()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: START printCurrentState()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Start setRequestOfLecture()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Requests of lecture from individuals: 0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Requests of lecture from companies: 0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: Requests of lecture from universities: 0
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: End setRequestOfLecture()
+1월 03, 2016 12:06:11 오전 logger.DifferLogger fine
+미세: END printCurrentState()
