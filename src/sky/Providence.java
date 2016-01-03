@@ -168,7 +168,7 @@ public class Providence {
 		
 		for(int i = 0; i<customerOfDifferentation.size(); i++){
 			if(customerOfDifferentation.get(i).getidentity()=="Student"||customerOfDifferentation.get(i).getidentity()=="GeneralIndividual"){
-				if(customerOfDifferentation.get(i).getBusySeason())//현재 날짜와 비교해야함 그러려면 날짜 클래스가 필요함
+				if(customerOfDifferentation.get(i).getBusySeason())//설정된 현재 날짜와 비교해야함 그러려면 날짜 클래스가 필요함
 			}
 		}
 		

@@ -5,7 +5,7 @@ public class MonthStrategy implements DayStrategy{
 	Day day = new Day();
 
 	@Override
-	public Day initDayData(int currentDate) {
+	public Day initDayData() {
 		// TODO Auto-generated method stub
 		return null;
 	}

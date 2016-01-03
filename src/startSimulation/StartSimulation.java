@@ -13,6 +13,7 @@ public class StartSimulation {
 	public static void main(String[] args) {
 		
 		Differentation differentation = Differentation.getInstance();//디퍼런테이션 기업 생성
+		Providence providence = Providence.getInstance();
 		DifferLogger logger = DifferLogger.getLogger();
 		Scanner s = new Scanner(System.in);
 		
@@ -46,6 +47,8 @@ public class StartSimulation {
 		//                                 시작
 		//=======================================================================
 		
+		providence.setRequestOfLecture(differentation.customerOfDifferentation);
+		
 		PrintText.clearScreen();
 		PrintText.printCurrentState();
 		PrintText.printInputCommendText();//명령받는 텍스트 출력
@@ -64,6 +67,9 @@ public class StartSimulation {
 			}else if(commendNum == 5){
 				differentation.doLectureOfUniversity();
 			}
+			
+			providence.setRequestOfLecture(differentation.customerOfDifferentation);
+			
 			PrintText.clearScreen();
 			PrintText.printCurrentState();
 			PrintText.printInputCommendText();//명령받는 텍스트 출력
