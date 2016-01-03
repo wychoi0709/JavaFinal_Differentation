@@ -1,12 +1,15 @@
 package sky;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Properties;
 
 import org.apache.commons.math3.distribution.NormalDistribution;
 
+import customer.Customer;
+import differentation.Differentation;
 import logger.DifferLogger;
 
 public class Providence {
@@ -130,5 +133,47 @@ public class Providence {
 		differLogger.fine("END bestowIncrementOfReputation()");
 		
 		return reputation;
+	}
+	
+	public ArrayList<Customer> setRequestOfLecture(ArrayList<Customer> customerOfDifferentation){
+
+		Properties properties = new Properties();
+		DifferLogger differLoger = DifferLogger.getLogger();
+		differLoger.fine("START setRequestOfLecture()");
+		
+		try {
+			properties.load(new FileInputStream("DistributionStrategy.properties"));
+		} catch (FileNotFoundException e) {
+			differLoger.warning("FileNotFoundException: "+e.getMessage());
+		} catch (IOException e) {
+			differLoger.warning("IOException: "+e.getMessage());
+		}
+		
+		int averageCriteriaOfRequestForIndividual = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_INDIVIDUAL"));
+		int stdevCriteriaOfRequestForIndividual = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_INDIVIDUAL"));
+
+		int averageCriteriaOfRequestForOrganization = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_ORGANIZATION"));
+		int stdevCriteriaOfRequestForOrganization = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_ORGANIZATION"));
+
+		differLoger.fine("Average Criteria Of Request For Individual: "+averageCriteriaOfRequestForIndividual);
+		differLoger.fine("Stdev Criteria Of Request For Individual: "+stdevCriteriaOfRequestForIndividual);
+		differLoger.fine("Average Criteria Of Request For Organization: "+averageCriteriaOfRequestForOrganization);
+		differLoger.fine("Stdev Criteria Of Request For Organization: "+stdevCriteriaOfRequestForOrganization);
+		
+		NormalDistribution providenceOfRequestCriteriaForIndividual = new NormalDistribution(averageCriteriaOfRequestForIndividual, stdevCriteriaOfRequestForIndividual);
+		NormalDistribution providenceOfRequestCriteriaForOrganization = new NormalDistribution(averageCriteriaOfRequestForOrganization, stdevCriteriaOfRequestForOrganization);
+		
+		int requestCriteriaForIndividual = (int)(providenceOfRequestCriteriaForIndividual.sample());
+		int requestCriteriaForOrganization = (int)(providenceOfRequestCriteriaForOrganization.sample());
+		
+		for(int i = 0; i<customerOfDifferentation.size(); i++){
+			if(customerOfDifferentation.get(i).getidentity()=="Student"||customerOfDifferentation.get(i).getidentity()=="GeneralIndividual"){
+				if(customerOfDifferentation.get(i).getBusySeason())//현재 날짜와 비교해야함 그러려면 날짜 클래스가 필요함
+			}
+		}
+		
+		differLoger.fine("END setRequestOfLecture()");
+		return customerOfDifferentation;
+		
 	}
 }
