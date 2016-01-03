@@ -1,6 +1,7 @@
 package differentation;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
@@ -35,9 +36,17 @@ public class BrandMarketing extends Decorator{
 		
 		differentation.setReputationForIndividual(reputationForIndividual);
 		differentation.setReputationForOrganization(reputationForOrganization);
-			
+		
+		FileInputStream filestream = null;
 		try {
-			properties.load(new FileInputStream("InvestTimeStrategy.properties"));
+			filestream = new FileInputStream("InvestTimeStrategy.properties");
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		try {
+			properties.load(filestream);
 		}catch(IOException e) {
 			differLogger.warning("IOException: " + e.getMessage());
 		}
@@ -47,6 +56,13 @@ public class BrandMarketing extends Decorator{
 		
 		differentation.setTotalInvestedTime(investedTimeForBrandMarketing);
 		differLogger.fine("END BrandMarketing's doAction()");
+		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 }

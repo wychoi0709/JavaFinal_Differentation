@@ -3,6 +3,7 @@ package customer;
 import java.util.ArrayList;
 
 import logger.DifferLogger;
+import sky.Providence;
 
 public abstract class Customer {
 	
@@ -10,10 +11,14 @@ public abstract class Customer {
 	protected ArrayList<Integer> busySeason = new ArrayList<Integer>();	//¹Ù»Û ½ÃÁð
 	protected String identity;	//¾î¶² °í°´ÀÎÁö
  	protected boolean requestOfLecture = false;	//°­ÀÇ¿äÃ»
-	
+	protected int budget;
 	
 	protected abstract void setNecessityOfSkill();
 	protected abstract void setBusySeason();
+	
+	public abstract void changeNecessityOfSkill(int necessityOfSkill);
+	public abstract void changeBudget(int budget);
+
 	public abstract int getNecessityOfSkill();
 	public abstract ArrayList<Integer> getBusySeason();
 	public abstract boolean getRequestOfLecture();
@@ -27,8 +32,23 @@ public abstract class Customer {
 		
 		setBusySeason();
 		setNecessityOfSkill();
+		setBudget();
 		
 		logger.fine("END generateCustomer()");
 	}
+	
+	public void switchRequestOfLecture() {
+		
+		if(requestOfLecture == true){
+			requestOfLecture = false;
+		}else if(requestOfLecture == false){
+			requestOfLecture = true;
+		}
+		
+	}
 
+	protected void setBudget(){
+		Providence providence = Providence.getInstance();
+		this.budget = providence.bestowBudget();
+	}
 }

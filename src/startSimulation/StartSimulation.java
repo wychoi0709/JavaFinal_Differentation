@@ -1,6 +1,7 @@
 package startSimulation;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.Scanner;
@@ -28,8 +29,16 @@ public class StartSimulation {
 		
 		logger.fine("START main()");
 
+		FileInputStream filestream = null;
+		try {
+			filestream = new FileInputStream("dayConfig.properties");
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		try{
-			properties.load(new FileInputStream("dayConfig.properties"));
+			properties.load(filestream);
 		} catch (IOException e) {
 			logger.warning("IOException: "+ e.getMessage());
 		}
@@ -37,17 +46,22 @@ public class StartSimulation {
 		String passNextUnitOfDate = properties.getProperty("DAY_STRATEGY");
 		DayStrategy dayStrategy = null;
 		
-		if(passNextUnitOfDate == "ONEWEEK"){
+		if(passNextUnitOfDate.equals("ONEWEEK")){
 			dayStrategy = new OneWeekStrategy();
-		}else if(passNextUnitOfDate == "THREEWEEK"){
+		}else if(passNextUnitOfDate.equals("THREEWEEK")){
 			dayStrategy = new ThreeWeeksStrategy();
-		}else if(passNextUnitOfDate == "MONTH"){
+		}else if(passNextUnitOfDate.equals("MONTH")){
 			dayStrategy = new MonthStrategy();
 		}else{
 			logger.warning("There is no DAY STRATEGY CONFIG");
 		}
 		
-		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		PrintText.printStart();//시작 텍스트 출력
 		
@@ -68,7 +82,7 @@ public class StartSimulation {
 		//                                 시작
 		//=======================================================================
 		
-		providence.setRequestOfLecture(differentation.customerOfDifferentation);
+		providence.setRequestOfLecture(day);
 		
 		PrintText.clearScreen();
 		PrintText.printCurrentState();
@@ -89,8 +103,12 @@ public class StartSimulation {
 				differentation.doLectureOfUniversity();
 			}
 			
-			day = dayStrategy.passNextUnitOfDate(day);
-			providence.setRequestOfLecture(differentation.customerOfDifferentation);
+			day = dayStrategy.passNextUnitOfDate(day);//일자를 한단계 옮겨주심
+			providence.bestowIncrementOfCustomer();//요소를 반영해서 고객을 증가시켜주심
+			providence.bestowChangeNecessity();//필요성의 변동
+			providence.bestowChangeBudget();//예산의 변동(모든 고객이지만 개인 고객만 유의미)
+			providence.setRequestOfLecture(day);//다양한 요소(날짜포함)를 반영해서 강의요청을 내려주심
+			
 			
 			PrintText.clearScreen();
 			PrintText.printCurrentState();
@@ -103,6 +121,9 @@ public class StartSimulation {
 		s.close();
 		logger.fine("END main()");
 		
+		logger.fileHandler.close();
+		logger.fineHandler.close();
+		logger.warningHandler.close();
 	}
 	
 }

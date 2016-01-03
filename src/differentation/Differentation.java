@@ -32,9 +32,9 @@ public class Differentation {
 	private int totalInvestedTime;//총 투자 시간
 	
 	public ArrayList<Customer> customerOfDifferentation = new ArrayList<Customer>();//디퍼런테이션 고객 리스트
-	private int requestOfLectureFromIndividual;
-	private int requestOfLectureFromUniversity;
-	private int requestOfLectureFromCompany;
+	private int requestOfLectureFromIndividual=0;
+	private int requestOfLectureFromUniversity=0;
+	private int requestOfLectureFromCompany=0;
 	//필요한 변수들 선언 END
 	
 	
@@ -83,6 +83,17 @@ public class Differentation {
 		return requestOfLectureFromCompany;
 	}
 	
+	public void setRequestOfLectureFromIndividual(int requestOfLectureFromIndividual) {
+		this.requestOfLectureFromIndividual += requestOfLectureFromIndividual;
+	}
+	
+	public void setRequestOfLectureFromUniversity(int requestOfLectureFromUniversity) {
+		this.requestOfLectureFromUniversity += requestOfLectureFromUniversity;
+	}
+	
+	public void setRequestOfLectureFromCompany(int requestOfLectureFromCompany) {
+		this.requestOfLectureFromCompany += requestOfLectureFromCompany;
+	}
 	//Getter, Setter 선언 END
 
 
@@ -112,9 +123,9 @@ public class Differentation {
 		differLogger.fine("Requests of lecture from companies: "+ requestOfLectureFromCompany);
 		differLogger.fine("Requests of lecture from universities: "+ requestOfLectureFromUniversity);
 		
-		this.requestOfLectureFromIndividual = requestOfLectureFromIndividual;
-		this.requestOfLectureFromCompany = requestOfLectureFromCompany;
-		this.requestOfLectureFromUniversity = requestOfLectureFromUniversity;
+		this.setRequestOfLectureFromIndividual(requestOfLectureFromIndividual);
+		this.setRequestOfLectureFromCompany(requestOfLectureFromCompany);
+		this.setRequestOfLectureFromUniversity(requestOfLectureFromUniversity);
 		
 		differLogger.fine("End setRequestOfLecture()");
 	}
@@ -149,6 +160,8 @@ public class Differentation {
 		coursePromotion.doAction();
 		
 	}
+
+
 
 
 	

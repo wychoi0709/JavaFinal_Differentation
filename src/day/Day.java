@@ -1,8 +1,8 @@
 package day;
 
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.Date;
 import java.util.Properties;
 
 import logger.DifferLogger;
@@ -20,8 +20,17 @@ public class Day {
 
 		differLogger.fine("START Day constructor()");
 		
+		FileInputStream filestream = null;
+		
 		try {
-			properties.load(new FileInputStream("dayConfig.properties"));
+			filestream = new FileInputStream("dayConfig.properties");
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		try {
+			properties.load(filestream);
 		} catch (IOException e) {
 			differLogger.warning("IOException: "+ e.getMessage());
 		}
@@ -30,15 +39,21 @@ public class Day {
 		
 		
 		//예를 들면 20160103
-		int year = Integer.parseInt(currentDate.substring(0, 3));
-		int month = Integer.parseInt(currentDate.substring(4, 5));
-		int date = Integer.parseInt(currentDate.substring(6, 7));
+		int year = Integer.parseInt(currentDate.substring(0, 4));
+		int month = Integer.parseInt(currentDate.substring(4, 6));
+		int date = Integer.parseInt(currentDate.substring(6, 8));
 		
 		this.year = year;
 		this.month = month;
 		this.date = date;
 		//currentDate를 잘라서 year / month / week / date를 설정할 것(덧. 1주 단위로 맞출 것)
 		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		differLogger.fine("END Day constructor");
 
 	}

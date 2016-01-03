@@ -42,4 +42,15 @@ public class University extends Customer{
 		// TODO Auto-generated method stub
 		return identity;
 	}
+
+	@Override
+	public void changeNecessityOfSkill(int necessityOfSkill) {
+		this.necessityOfSkill = necessityOfSkill;		
+	}
+
+	@Override
+	public void changeBudget(int budget) {
+		this.budget = budget;
+	}
+	
 }

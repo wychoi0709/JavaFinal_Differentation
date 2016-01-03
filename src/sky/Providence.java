@@ -8,7 +8,12 @@ import java.util.Properties;
 
 import org.apache.commons.math3.distribution.NormalDistribution;
 
+import customer.Company;
 import customer.Customer;
+import customer.GeneralIndividual;
+import customer.Student;
+import customer.University;
+import day.Day;
 import differentation.Differentation;
 import logger.DifferLogger;
 
@@ -31,11 +36,21 @@ public class Providence {
 		DifferLogger differLogger = DifferLogger.getLogger();
 		differLogger.fine("START bestowNecessityState()");
 			
+		FileInputStream filestream = null;
 		try {
-			properties.load(new FileInputStream("DistributionStrategy.properties"));
+			filestream = new FileInputStream("DistributionStrategy.properties");
+		} catch (FileNotFoundException e1) {
+			e1.printStackTrace();
+		}
+
+		
+		try {
+			properties.load(filestream);
+			
 		}catch(IOException e) {
 			differLogger.warning("IOException: " + e.getMessage());
 		}
+		
 		
 		double averageAmoutOfNecessity = Double.parseDouble(properties.getProperty("AVERAGE_SET_AMOUNT_OF_NECESSITY"));
 		double stdevAmoutOfNecessity = Double.parseDouble(properties.getProperty("STDEV_SET_AMOUNT_OF_NECESSITY"));
@@ -46,6 +61,15 @@ public class Providence {
 		NormalDistribution providenceOfNecessity = new NormalDistribution(averageAmoutOfNecessity, stdevAmoutOfNecessity);
 		
 		differLogger.fine("END bestowNecessityState()");
+
+		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return (int)(providenceOfNecessity.sample());
 
 	}
@@ -57,9 +81,17 @@ public class Providence {
 		Properties properties = new Properties();
 		DifferLogger differLogger = DifferLogger.getLogger();
 		differLogger.fine("START bestowSeasonState()");
-			
+		
+		FileInputStream filestream=null;
 		try {
-			properties.load(new FileInputStream("DistributionStrategy.properties"));
+			 filestream = new FileInputStream("DistributionStrategy.properties");
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		try {
+			properties.load(filestream);
 		}catch(IOException e) {
 			differLogger.warning("IOException: " + e.getMessage());
 		}
@@ -100,7 +132,12 @@ public class Providence {
 		
 		differLogger.fine("END bestowSeasonState()");
 		
-		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		return busySeasons;
 	}
 
@@ -113,8 +150,18 @@ public class Providence {
 		DifferLogger differLogger = DifferLogger.getLogger();
 		differLogger.fine("START bestowIncrementOfReputation()");
 			
+		
+		
+		FileInputStream filestream = null;
 		try {
-			properties.load(new FileInputStream("DistributionStrategy.properties"));
+			 filestream = new FileInputStream("DistributionStrategy.properties");
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		try {
+			properties.load(filestream);
 		}catch(IOException e) {
 			differLogger.warning("IOException: " + e.getMessage());
 		}
@@ -132,28 +179,44 @@ public class Providence {
 		
 		differLogger.fine("END bestowIncrementOfReputation()");
 		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		return reputation;
 	}
 	
-	public ArrayList<Customer> setRequestOfLecture(ArrayList<Customer> customerOfDifferentation){
+	public void setRequestOfLecture(Day day){
 
 		Properties properties = new Properties();
 		DifferLogger differLoger = DifferLogger.getLogger();
+		Differentation differentation = Differentation.getInstance();
 		differLoger.fine("START setRequestOfLecture()");
 		
+		ArrayList<Customer> customerOfDifferentation = differentation.customerOfDifferentation;
+		
+		FileInputStream filestream=null;
 		try {
-			properties.load(new FileInputStream("DistributionStrategy.properties"));
-		} catch (FileNotFoundException e) {
-			differLoger.warning("FileNotFoundException: "+e.getMessage());
-		} catch (IOException e) {
-			differLoger.warning("IOException: "+e.getMessage());
+			 filestream = new FileInputStream("DistributionStrategy.properties");
+		} catch (FileNotFoundException e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
+		try {
+			properties.load(filestream);
+		}catch(IOException e) {
+			differLoger.warning("IOException: " + e.getMessage());
 		}
 		
 		int averageCriteriaOfRequestForIndividual = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_INDIVIDUAL"));
-		int stdevCriteriaOfRequestForIndividual = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_INDIVIDUAL"));
+		int stdevCriteriaOfRequestForIndividual = Integer.parseInt(properties.getProperty("STDEV_CRITERIA_OF_REQUEST_FOR_INDIVIDUAL"));
 
 		int averageCriteriaOfRequestForOrganization = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_ORGANIZATION"));
-		int stdevCriteriaOfRequestForOrganization = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_ORGANIZATION"));
+		int stdevCriteriaOfRequestForOrganization = Integer.parseInt(properties.getProperty("STDEV_CRITERIA_OF_REQUEST_FOR_ORGANIZATION"));
 
 		differLoger.fine("Average Criteria Of Request For Individual: "+averageCriteriaOfRequestForIndividual);
 		differLoger.fine("Stdev Criteria Of Request For Individual: "+stdevCriteriaOfRequestForIndividual);
@@ -167,13 +230,262 @@ public class Providence {
 		int requestCriteriaForOrganization = (int)(providenceOfRequestCriteriaForOrganization.sample());
 		
 		for(int i = 0; i<customerOfDifferentation.size(); i++){
-			if(customerOfDifferentation.get(i).getidentity()=="Student"||customerOfDifferentation.get(i).getidentity()=="GeneralIndividual"){
-				if(customerOfDifferentation.get(i).getBusySeason())//설정된 현재 날짜와 비교해야함 그러려면 날짜 클래스가 필요함
+			if(customerOfDifferentation.get(i).getidentity().equals("Student")||customerOfDifferentation.get(i).getidentity().equals("GeneralIndividual")){
+				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){
+					differLoger.fine("One Busy Season of individual");
+					continue;
+				}else{
+					if(customerOfDifferentation.get(i).getNecessityOfSkill()>requestCriteriaForIndividual){
+						differentation.setReputationForIndividual(1);
+						if(customerOfDifferentation.get(i).getRequestOfLecture()==false){
+							customerOfDifferentation.get(i).switchRequestOfLecture();
+						}
+					}
+				}
+			}else if(customerOfDifferentation.get(i).getidentity().equals("Company")){
+				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){
+					differLoger.fine("One Busy Season of Company");
+					continue;
+				}else{
+					if(customerOfDifferentation.get(i).getNecessityOfSkill()>requestCriteriaForOrganization){
+						differentation.setRequestOfLectureFromCompany(1);
+						if(customerOfDifferentation.get(i).getRequestOfLecture()==false){
+							customerOfDifferentation.get(i).switchRequestOfLecture();
+						}
+					}
+				}
+			}else if(customerOfDifferentation.get(i).getidentity().equals("University")){
+				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){
+					differLoger.fine("One Busy Season of University");
+					continue;
+				}else{
+					if(customerOfDifferentation.get(i).getNecessityOfSkill()>requestCriteriaForOrganization){
+						differentation.setRequestOfLectureFromUniversity(1);
+						if(customerOfDifferentation.get(i).getRequestOfLecture()==false){
+							customerOfDifferentation.get(i).switchRequestOfLecture();
+						}
+					}
+				}
 			}
+		}
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 		
 		differLoger.fine("END setRequestOfLecture()");
-		return customerOfDifferentation;
+		return;
 		
+	}
+
+	public void bestowIncrementOfCustomer() {
+
+		Properties properties = new Properties();
+		DifferLogger differLogger = DifferLogger.getLogger();
+		Differentation differentation = Differentation.getInstance();
+		differLogger.fine("START bestowIncrementOfCustomer()");
+		
+		FileInputStream filestream=null;
+		try {
+			 filestream = new FileInputStream("TotalCustomerNumber.properties");
+		} catch (FileNotFoundException e1) {
+			differLogger.warning("FileNotFoundException: " + e1.getMessage());
+		}
+		
+		try {
+			properties.load(filestream);
+		}catch(IOException e) {
+			differLogger.warning("IOException: " + e.getMessage());
+		}
+		
+		double totalIndividualCustomer = Double.parseDouble(properties.getProperty("TOTAL_INDIVIDUAL_CUSTOMER"));
+		double totalCompanyCustomer = Double.parseDouble(properties.getProperty("TOTAL_COMPANY_CUSTOMER"));
+		double totalUniversityCustomer = Double.parseDouble(properties.getProperty("TOTAL_UNIVERSITY_CUSTOMER"));
+		
+		try {
+			properties.load(new FileInputStream("DistributionStrategy.properties"));
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		double averageIncrementOfIndividualCustomer = Double.parseDouble(properties.getProperty("AVERAGE_INCREMENT_OF_INDIVIDUAL_CUSTOMER"));
+		double stdevIncrementOfIndividualCustomer = Double.parseDouble(properties.getProperty("STDEV_INCREMENT_OF_INDIVIDUAL_CUSTOMER"));
+		
+		double averageIncrementOfOrganizationCustomer = Double.parseDouble(properties.getProperty("AVERAGE_INCREMENT_OF_ORGANIZATION_CUSTOMER"));
+		double stdevIncrementOfOrganizationCustomer = Double.parseDouble(properties.getProperty("STDEV_INCREMENT_OF_ORGANIZATION_CUSTOMER"));
+		
+		double probabilityOfStudent = Double.parseDouble(properties.getProperty("PROBABILITY_OF_STUDENT"));
+		
+		NormalDistribution normalDistributionOfIndividualCustomer = new NormalDistribution(averageIncrementOfIndividualCustomer, stdevIncrementOfIndividualCustomer);
+		NormalDistribution normalDistributionOfOrganizationCustomer = new NormalDistribution(averageIncrementOfOrganizationCustomer, stdevIncrementOfOrganizationCustomer);
+
+		int incrementOfIndividualCustomer = (int)(normalDistributionOfIndividualCustomer.sample()*totalIndividualCustomer);
+		
+		int incrementOfCompanyCustomer = (int)(normalDistributionOfOrganizationCustomer.sample()*totalCompanyCustomer);
+		int incrementOfUniversityCustomer = (int)(normalDistributionOfOrganizationCustomer.sample()*totalUniversityCustomer);
+		int incrementOfStudentCustomer = (int)(incrementOfIndividualCustomer* probabilityOfStudent);
+		int incrementOfGeneralIndividualCustomer = (int)(incrementOfIndividualCustomer* (1-probabilityOfStudent));		
+
+		for(int i = 0; i < incrementOfCompanyCustomer; i++){
+			Customer company = new Company();
+			company.initial();
+			differentation.customerOfDifferentation.add(company);
+		}
+		
+		for(int i = 0; i< incrementOfUniversityCustomer; i++){
+			Customer university = new University();
+			university.initial();
+			differentation.customerOfDifferentation.add(university);
+		}
+		
+		for(int i = 0; i< incrementOfStudentCustomer; i++){
+			Customer student = new Student();
+			student.initial();
+			differentation.customerOfDifferentation.add(student);
+		}
+		
+		for(int i = 0; i < incrementOfGeneralIndividualCustomer; i++){
+			Customer generalIndividual = new GeneralIndividual();
+			generalIndividual.initial();
+			differentation.customerOfDifferentation.add(generalIndividual);
+		}
+		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		differLogger.fine("END bestowIncrementOfCustomer()");
+	}
+
+	public void bestowChangeNecessity() {
+
+		Properties properties = new Properties();
+		DifferLogger differLogger = DifferLogger.getLogger();
+		Differentation differentation = Differentation.getInstance();
+		differLogger.fine("START bestowChangeNecessity()");
+		
+		FileInputStream filestream=null;
+		try {
+			 filestream = new FileInputStream("DistributionStrategy.properties");
+		} catch (FileNotFoundException e1) {
+			differLogger.warning("FileNotFoundException: " + e1.getMessage());
+		}
+		
+		try {
+			properties.load(filestream);
+		}catch(IOException e) {
+			differLogger.warning("IOException: " + e.getMessage());
+		}
+		
+		int averageChangeAmountOfNecessity = Integer.parseInt(properties.getProperty("AVERAGE_CHANGE_AMOUNT_OF_NECESSITY"));
+		int stdevChangeAmountOfNecessity = Integer.parseInt(properties.getProperty("STDEV_CHANGE_AMOUNT_OF_NECESSITY"));
+		
+		NormalDistribution normalDistributionOfChangeAmount = new NormalDistribution(averageChangeAmountOfNecessity, stdevChangeAmountOfNecessity);
+		int amount = (int)normalDistributionOfChangeAmount.sample();
+		
+		for(int i=0; i<differentation.customerOfDifferentation.size(); i++){
+			int originalData = differentation.customerOfDifferentation.get(i).getNecessityOfSkill();
+			differentation.customerOfDifferentation.get(i).changeNecessityOfSkill(originalData+amount);
+		}
+		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		differLogger.fine("END bestowChangeNecessity()");
+	}
+
+	public void bestowChangeBudget() {
+
+		Properties properties = new Properties();
+		DifferLogger differLogger = DifferLogger.getLogger();
+		Differentation differentation = Differentation.getInstance();
+		differLogger.fine("START bestowChangeBudget()");
+		
+		FileInputStream filestream=null;
+		try {
+			 filestream = new FileInputStream("DistributionStrategy.properties");
+		} catch (FileNotFoundException e1) {
+			differLogger.warning("FileNotFoundException: " + e1.getMessage());
+		}
+		
+		try {
+			properties.load(filestream);
+		}catch(IOException e) {
+			differLogger.warning("IOException: " + e.getMessage());
+		}
+		
+		int averageChangeAmountOfBudget = Integer.parseInt(properties.getProperty("AVERAGE_CHANGE_AMOUNT_OF_BUDGET"));
+		int stdevChangeAmountOfBudget = Integer.parseInt(properties.getProperty("STDEV_CHANGE_AMOUNT_OF_BUDGET"));
+		
+		NormalDistribution normalDistributionOfChangeAmount = new NormalDistribution(averageChangeAmountOfBudget, stdevChangeAmountOfBudget);
+		int amount = (int)normalDistributionOfChangeAmount.sample();
+		
+		for(int i=0; i<differentation.customerOfDifferentation.size(); i++){
+			int originalData = differentation.customerOfDifferentation.get(i).getNecessityOfSkill();
+			differentation.customerOfDifferentation.get(i).changeBudget(originalData+amount);
+		}
+		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		differLogger.fine("END bestowChangeBudget()");
+	}
+	
+	public int bestowBudget() {//고객 만들때 쓰임
+
+		Properties properties = new Properties();
+		DifferLogger differLogger = DifferLogger.getLogger();
+
+		differLogger.fine("START bestowBudget()");
+		int budget = 0;
+		
+		FileInputStream filestream=null;
+		try {
+			 filestream = new FileInputStream("DistributionStrategy.properties");
+		} catch (FileNotFoundException e1) {
+			differLogger.warning("FileNotFoundException: " + e1.getMessage());
+		}
+		
+		try {
+			properties.load(filestream);
+		}catch(IOException e) {
+			differLogger.warning("IOException: " + e.getMessage());
+		}
+		
+		int averageAmountOfBudget = Integer.parseInt(properties.getProperty("AVERAGE_SET_AMOUNT_OF_BUDGET "));
+		int stdevAmountOfBudget = Integer.parseInt(properties.getProperty("STDEV_SET_AMOUNT_OF_BUDGET "));
+		
+		NormalDistribution normalDistributionOfAmount = new NormalDistribution(averageAmountOfBudget, stdevAmountOfBudget);
+		budget = (int)normalDistributionOfAmount.sample();
+		
+		try {
+			filestream.close();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		differLogger.fine("END bestowBudget()");
+		
+		
+		//예산 바꿔줄 것
+		
+		return budget;
 	}
 }
