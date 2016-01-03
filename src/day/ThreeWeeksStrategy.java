@@ -5,16 +5,12 @@ public class ThreeWeeksStrategy implements DayStrategy{
 	Day day = new Day();
 
 	@Override
-	public Day initDayData(int currentDate) {
+	public Day passNextUnitOfDate(Day day) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
-	public Day setDayData(Day day) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+
 	
 
 }

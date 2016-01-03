@@ -1,30 +1,29 @@
 package day;
 
-import java.io.FileInputStream;
-import java.io.IOException;
 import java.util.Date;
-import java.util.Properties;
-
-
-import logger.DifferLogger;
+import java.util.GregorianCalendar;
 
 public class OneWeekStrategy implements DayStrategy{
 
-	Day day = new Day();
-
 	@Override
-	public Day initDayData() {
+	public Day passNextUnitOfDate(Day day) {
 		
-		return null;
+		int year = day.getYear();
+		int month = day.getMonth();
+		int date = day.getDate();
+
+		GregorianCalendar gregorianCalendar = new GregorianCalendar(year, month, date);
+		
+		gregorianCalendar.add(GregorianCalendar.DAY_OF_MONTH, 7);//이게 맞는 방법인가?
+		
+		//Date 클래스 대신 Calendar로 바꼈다고 함. 다시 알아 볼 것
+		
+	
+		
+		return day;
 	}
 
-	@Override
-	public Day setDayData(Day day) {//date 조절해서 넘어올 것. 해당 년의 데이터를 토대로 week, month, year를 다시 맞춰줄것
-		// TODO Auto-generated method stub
-		Date dd = new Date();
-//		dd.
-		return null;
-	}
+
 	
 
 }

@@ -2,6 +2,7 @@ package day;
 
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.Date;
 import java.util.Properties;
 
 import logger.DifferLogger;
@@ -10,10 +11,9 @@ public class Day {
 	
 	private int year;
 	private int month;
-	private int week;
 	private int date;
 	
-	public Day(){//일반 Day 객체를 생성할 경우, 설정한 날짜의 객체가 만들어짐
+	public Day(){//일반 Day 객체를 생성할 경우, Properties에서 설정한 날짜의 객체가 만들어짐
 		
 		Properties properties = new Properties();
 		DifferLogger differLogger = DifferLogger.getLogger();
@@ -28,10 +28,10 @@ public class Day {
 		String currentDate = properties.getProperty("CURRENT_DAY_DATA");
 		
 		
-		//20160103
+		
+		//예를 들면 20160103
 		int year = Integer.parseInt(currentDate.substring(0, 3));
 		int month = Integer.parseInt(currentDate.substring(4, 5));
-		int week;
 		int date = Integer.parseInt(currentDate.substring(6, 7));
 		
 		this.year = year;
@@ -47,7 +47,6 @@ public class Day {
 
 		int year = Integer.parseInt(dayData.substring(0, 3));
 		int month = Integer.parseInt(dayData.substring(4, 5));
-		int week;
 		int date = Integer.parseInt(dayData.substring(6, 7));
 		
 		this.year = year;
@@ -73,12 +72,6 @@ public class Day {
 	}
 	public void setDate(int date) {
 		this.date = date;
-	}
-	public int getWeek() {
-		return week;
-	}
-	public void setWeek(int week) {
-		this.week = week;
 	}
 	
 }

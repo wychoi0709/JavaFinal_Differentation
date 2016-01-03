@@ -1,8 +1,15 @@
 package startSimulation;
 
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
 import java.util.Scanner;
 
-
+import day.Day;
+import day.DayStrategy;
+import day.MonthStrategy;
+import day.OneWeekStrategy;
+import day.ThreeWeeksStrategy;
 import differentation.Differentation;
 import logger.DifferLogger;
 import sky.Providence;
@@ -16,26 +23,40 @@ public class StartSimulation {
 		Providence providence = Providence.getInstance();
 		DifferLogger logger = DifferLogger.getLogger();
 		Scanner s = new Scanner(System.in);
+		Properties properties = new Properties();
+		Day day = new Day();
 		
-
 		logger.fine("START main()");
 
+		try{
+			properties.load(new FileInputStream("dayConfig.properties"));
+		} catch (IOException e) {
+			logger.warning("IOException: "+ e.getMessage());
+		}
+
+		String passNextUnitOfDate = properties.getProperty("DAY_STRATEGY");
+		DayStrategy dayStrategy = null;
+		
+		if(passNextUnitOfDate == "ONEWEEK"){
+			dayStrategy = new OneWeekStrategy();
+		}else if(passNextUnitOfDate == "THREEWEEK"){
+			dayStrategy = new ThreeWeeksStrategy();
+		}else if(passNextUnitOfDate == "MONTH"){
+			dayStrategy = new MonthStrategy();
+		}else{
+			logger.warning("There is no DAY STRATEGY CONFIG");
+		}
+		
+		
+		
 		PrintText.printStart();//시작 텍스트 출력
 		
-		//정규분포 쓰는 방법!!!!!!!!!!
-//		NormalDistribution nd = new NormalDistribution(100, 25);
-//		double ii  = nd.sample();
-//		System.out.println(ii);
-		
-		
 		int commendNum = s.nextInt();//1은 계속, 2는 종료
-		
 		while(commendNum != 1&&commendNum != 2){
 			PrintText.printWrongNum();
 			PrintText.printStart();
 			commendNum = s.nextInt();//1은 계속, 2는 종료
 		}
-
 		if(commendNum == 2){
 			PrintText.printEnd();//굿바이 텍스트 출력
 			//텍스트가 보이고 return되는지 확인할 것(안보이면 s.nextInt()라도 하나 넣기
@@ -68,11 +89,14 @@ public class StartSimulation {
 				differentation.doLectureOfUniversity();
 			}
 			
+			day = dayStrategy.passNextUnitOfDate(day);
 			providence.setRequestOfLecture(differentation.customerOfDifferentation);
 			
 			PrintText.clearScreen();
 			PrintText.printCurrentState();
 			PrintText.printInputCommendText();//명령받는 텍스트 출력
+			
+			
 		}
 		
 		PrintText.printEnd();
