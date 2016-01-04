@@ -35,6 +35,8 @@ public class Differentation {
 	private int requestOfLectureFromIndividual=0;
 	private int requestOfLectureFromUniversity=0;
 	private int requestOfLectureFromCompany=0;
+	
+	private boolean isCoursePromotion=false;
 	//필요한 변수들 선언 END
 	
 	
@@ -94,8 +96,15 @@ public class Differentation {
 	public void setRequestOfLectureFromCompany(int requestOfLectureFromCompany) {
 		this.requestOfLectureFromCompany += requestOfLectureFromCompany;
 	}
+	
+	public boolean isCoursePromotion() {
+		return isCoursePromotion;
+	}
+	
+	public void setCoursePromotion(boolean isCoursePromotion) {
+		this.isCoursePromotion = isCoursePromotion;
+	}
 	//Getter, Setter 선언 END
-
 
 
 	public void setRequestNumberOfLecture() {
@@ -129,15 +138,16 @@ public class Differentation {
 		
 		differLogger.fine("End setRequestOfLecture()");
 	}
-
+	
 	public void brandMarketing(){
 		BrandMarketing brandMarketing = new BrandMarketing(new MarketingBuzz());
 		brandMarketing.doAction();
 	}
-	
-	public void promotionOfLecture(){
-		PromotionOfLecture promotionOfLecture = new PromotionOfLecture(new MarketingBuzz());
-		promotionOfLecture.doAction();
+
+	public void coursePromotion() {//개인고객의 강의 들을 확률 증가
+		CoursePromotion coursePromotion = new CoursePromotion(new MarketingBuzz());
+		coursePromotion.doAction();
+		
 	}
 	
 	public void doLectureOfIndividual(){
@@ -155,14 +165,5 @@ public class Differentation {
 		doLectureOfUniversity.doAction();
 	}
 
-	public void coursePromotion() {
-		CoursePromotion coursePromotion = new CoursePromotion(new MarketingBuzz());
-		coursePromotion.doAction();
-		
-	}
 
-
-
-
-	
 }

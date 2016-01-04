@@ -97,7 +97,7 @@ public class Providence {
 		}
 		
 		double averageBusySeasonNumber = Double.parseDouble(properties.getProperty("AVERAGE_SET_BUSYSEASON_NUMBER"));
-		double stdevBusySeasonNumber = Double.parseDouble(properties.getProperty("STDEV_SET BUSYSEASON_NUMBER"));
+		double stdevBusySeasonNumber = Double.parseDouble(properties.getProperty("STDEV_SET_BUSYSEASON_NUMBER"));
 
 		differLogger.fine("Average number of busy season: "+ averageBusySeasonNumber);
 		differLogger.fine("Stdev number of busy season: "+ stdevBusySeasonNumber);
@@ -114,23 +114,34 @@ public class Providence {
 			numberOfBusySeason = 12;
 		}
 		
-		for(int i =0; i<numberOfBusySeason; i++){
+		if(numberOfBusySeason != 0){
 			int season = (int)(Math.random()*12) + 1;//1~12까지 변수
-			int j;
-			for(j =0 ; j < i; j++){
-				if(busySeasons.get(j)==season){
-					break;
-				}
-			}
-			if(busySeasons.get(j)==season){
-				i--;
-				continue;
-			}
-			
 			busySeasons.add(season);
 		}
 		
-		differLogger.fine("END bestowSeasonState()");
+		if(numberOfBusySeason !=1){
+			for(int i =0; i<numberOfBusySeason; i++){
+				int season = (int)(Math.random()*12) + 1;//1~12까지 변수
+				boolean isDuplication = false;
+				
+				for(int j =0 ; j <= i; j++){
+					if(busySeasons.get(j)==season){
+						isDuplication = true;
+					}
+				}
+				
+				if(isDuplication){
+					busySeasons.remove(i);
+					i--;
+					continue;
+				}
+				busySeasons.add(season);
+				
+			}
+		}
+//f		정해진 개수만큼 중복되지 않은 임의의 순자를 배열에 담는 방법
+		
+ 		differLogger.fine("END bestowSeasonState()");
 		
 		try {
 			filestream.close();
@@ -189,7 +200,7 @@ public class Providence {
 		return reputation;
 	}
 	
-	public void setRequestOfLecture(Day day){
+	public void setRequestOfLecture(Day day){//강의 요청을 결정해주는 함수
 
 		Properties properties = new Properties();
 		DifferLogger differLoger = DifferLogger.getLogger();
@@ -212,16 +223,27 @@ public class Providence {
 			differLoger.warning("IOException: " + e.getMessage());
 		}
 		
-		int averageCriteriaOfRequestForIndividual = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_INDIVIDUAL"));
+		double averageCriteriaOfRequestForIndividual = Double.parseDouble(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_INDIVIDUAL"));
 		int stdevCriteriaOfRequestForIndividual = Integer.parseInt(properties.getProperty("STDEV_CRITERIA_OF_REQUEST_FOR_INDIVIDUAL"));
 
 		int averageCriteriaOfRequestForOrganization = Integer.parseInt(properties.getProperty("AVERAGE_CRITERIA_OF_REQUEST_FOR_ORGANIZATION"));
 		int stdevCriteriaOfRequestForOrganization = Integer.parseInt(properties.getProperty("STDEV_CRITERIA_OF_REQUEST_FOR_ORGANIZATION"));
 
+		double probabilityChangeDealtWithPromotion = Double.parseDouble(properties.getProperty("PROBABILITY_CHAGE_DEALT_WITH_PROMOTION"));
+		
 		differLoger.fine("Average Criteria Of Request For Individual: "+averageCriteriaOfRequestForIndividual);
 		differLoger.fine("Stdev Criteria Of Request For Individual: "+stdevCriteriaOfRequestForIndividual);
 		differLoger.fine("Average Criteria Of Request For Organization: "+averageCriteriaOfRequestForOrganization);
 		differLoger.fine("Stdev Criteria Of Request For Organization: "+stdevCriteriaOfRequestForOrganization);
+		
+		//만약 프로모션 중이라면, 설정된 %만큼 증가시켜서 개인고객의 요청이 증가한다 START
+		
+		if(differentation.isCoursePromotion() == true){
+			averageCriteriaOfRequestForIndividual = (int)(averageCriteriaOfRequestForIndividual*probabilityChangeDealtWithPromotion);
+			differentation.setCoursePromotion(false);
+		}
+		
+		//만약 프로모션 중이라면, 설정된 %만큼 증가시켜서 개인고객의 요청이 증가한다 END
 		
 		NormalDistribution providenceOfRequestCriteriaForIndividual = new NormalDistribution(averageCriteriaOfRequestForIndividual, stdevCriteriaOfRequestForIndividual);
 		NormalDistribution providenceOfRequestCriteriaForOrganization = new NormalDistribution(averageCriteriaOfRequestForOrganization, stdevCriteriaOfRequestForOrganization);
@@ -231,26 +253,29 @@ public class Providence {
 		
 		for(int i = 0; i<customerOfDifferentation.size(); i++){
 			if(customerOfDifferentation.get(i).getidentity().equals("Student")||customerOfDifferentation.get(i).getidentity().equals("GeneralIndividual")){
-				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){
+				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){	//시즌에 안맞음
 					differLoger.fine("One Busy Season of individual");
 					continue;
+				}else if(customerOfDifferentation.get(i).getIsPassedLecture()==true){	//강의를 이미 들음
+					differLoger.fine("Already Passed Lecture // individual");
+					continue;
 				}else{
-					if(customerOfDifferentation.get(i).getNecessityOfSkill()>requestCriteriaForIndividual){
-						differentation.setReputationForIndividual(1);
-						if(customerOfDifferentation.get(i).getRequestOfLecture()==false){
-							customerOfDifferentation.get(i).switchRequestOfLecture();
+					if(customerOfDifferentation.get(i).getNecessityOfSkill()>requestCriteriaForIndividual){	//필요성 기준 통과
+						if(customerOfDifferentation.get(i).getRequestOfLecture()==false){	//기존에 강의 신청 안함
+							customerOfDifferentation.get(i).switchRequestOfLecture();	//강의신청함
+							differentation.setRequestOfLectureFromIndividual(1);	//강의신청 증가
 						}
 					}
 				}
-			}else if(customerOfDifferentation.get(i).getidentity().equals("Company")){
-				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){
+			}else if(customerOfDifferentation.get(i).getidentity().equals("Company")){	//회사
+				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){	//시즌에 안맞음
 					differLoger.fine("One Busy Season of Company");
 					continue;
 				}else{
-					if(customerOfDifferentation.get(i).getNecessityOfSkill()>requestCriteriaForOrganization){
-						differentation.setRequestOfLectureFromCompany(1);
-						if(customerOfDifferentation.get(i).getRequestOfLecture()==false){
-							customerOfDifferentation.get(i).switchRequestOfLecture();
+					if(customerOfDifferentation.get(i).getNecessityOfSkill()>requestCriteriaForOrganization){	//필요성 기준 통과
+						if(customerOfDifferentation.get(i).getRequestOfLecture()==false){	//기존 강의신청 안함
+							customerOfDifferentation.get(i).switchRequestOfLecture();	//강의요청함
+							differentation.setRequestOfLectureFromCompany(1);	//강의요청증가
 						}
 					}
 				}
@@ -260,9 +285,9 @@ public class Providence {
 					continue;
 				}else{
 					if(customerOfDifferentation.get(i).getNecessityOfSkill()>requestCriteriaForOrganization){
-						differentation.setRequestOfLectureFromUniversity(1);
 						if(customerOfDifferentation.get(i).getRequestOfLecture()==false){
 							customerOfDifferentation.get(i).switchRequestOfLecture();
+							differentation.setRequestOfLectureFromUniversity(1);
 						}
 					}
 				}
@@ -325,10 +350,17 @@ public class Providence {
 		NormalDistribution normalDistributionOfIndividualCustomer = new NormalDistribution(averageIncrementOfIndividualCustomer, stdevIncrementOfIndividualCustomer);
 		NormalDistribution normalDistributionOfOrganizationCustomer = new NormalDistribution(averageIncrementOfOrganizationCustomer, stdevIncrementOfOrganizationCustomer);
 
-		int incrementOfIndividualCustomer = (int)(normalDistributionOfIndividualCustomer.sample()*totalIndividualCustomer);
 		
-		int incrementOfCompanyCustomer = (int)(normalDistributionOfOrganizationCustomer.sample()*totalCompanyCustomer);
-		int incrementOfUniversityCustomer = (int)(normalDistributionOfOrganizationCustomer.sample()*totalUniversityCustomer);
+		int incrementOfIndividualCustomer = (int)
+				((normalDistributionOfIndividualCustomer.sample()*differentation.getReputationForIndividual())
+						*totalIndividualCustomer);
+		
+		int incrementOfCompanyCustomer = (int)
+				((normalDistributionOfOrganizationCustomer.sample()*differentation.getReputationForOrganization())
+						*totalCompanyCustomer);
+		int incrementOfUniversityCustomer = (int)
+				((normalDistributionOfOrganizationCustomer.sample()*differentation.getReputationForOrganization())
+						*totalUniversityCustomer);
 		int incrementOfStudentCustomer = (int)(incrementOfIndividualCustomer* probabilityOfStudent);
 		int incrementOfGeneralIndividualCustomer = (int)(incrementOfIndividualCustomer* (1-probabilityOfStudent));		
 

@@ -6,7 +6,7 @@ import sky.Providence;
 
 public class GeneralIndividual extends Customer{
 
-	private int isPassedLecture = 0; //0은 아직 안들음, 1은 들음
+	
 	
 	@Override
 	public void setNecessityOfSkill() {
@@ -45,13 +45,12 @@ public class GeneralIndividual extends Customer{
 		return identity;
 	}
 
-	public int getIsPassedLecture() {
-		return isPassedLecture;
+	@Override
+	public boolean getIsPassedLecture() {
+		// TODO Auto-generated method stub
+		return this.isPassedLecture;
 	}
 
-	public void setIsPassedLecture(int isPassedLecture) {
-		this.isPassedLecture = isPassedLecture;
-	}
 
 
 	@Override
@@ -64,5 +63,10 @@ public class GeneralIndividual extends Customer{
 		this.budget = budget;
 	}
 	
+	@Override
+	public int getBudget() {
+		
+		return this.budget;
+	}
 
 }

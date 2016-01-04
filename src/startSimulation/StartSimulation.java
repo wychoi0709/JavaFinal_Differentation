@@ -103,7 +103,7 @@ public class StartSimulation {
 				differentation.doLectureOfUniversity();
 			}
 			
-			day = dayStrategy.passNextUnitOfDate(day);//일자를 한단계 옮겨주심
+			day = dayStrategy.passNextUnitOfDate(day);//일자를 한단계(기존 설정파일에 따라) 옮겨주심
 			providence.bestowIncrementOfCustomer();//요소를 반영해서 고객을 증가시켜주심
 			providence.bestowChangeNecessity();//필요성의 변동
 			providence.bestowChangeBudget();//예산의 변동(모든 고객이지만 개인 고객만 유의미)

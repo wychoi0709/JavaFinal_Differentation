@@ -53,4 +53,16 @@ public class Company extends Customer{
 		this.budget = budget;		
 	}
 
+	@Override
+	public int getBudget() {
+		
+		return this.budget;
+	}
+
+	@Override
+	public boolean getIsPassedLecture() {
+		// TODO Auto-generated method stub
+		return this.isPassedLecture;
+	}
+
 }
