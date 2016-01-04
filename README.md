@@ -1,6 +1,6 @@
 # PROJECT_DIFFERENTATION_NEXT_JAVA
 
-![introduction](http://i.imgur.com/5vrwKN5.jpg)
+![introduction](http://i.imgur.com/XcZBGmj.png)
 
 ### 프로그램 목적
 > 본 프로그램은  파워포인트 교육 기업 [디퍼런테이션]의 활동들의 투자 시간과 
