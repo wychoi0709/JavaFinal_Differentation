@@ -23,7 +23,7 @@ public class Day {
 		FileInputStream filestream = null;
 		
 		try {
-			filestream = new FileInputStream("dayConfig.properties");
+			filestream = new FileInputStream("DayConfig.properties");
 		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();

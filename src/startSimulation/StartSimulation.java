@@ -31,7 +31,7 @@ public class StartSimulation {
 
 		FileInputStream filestream = null;
 		try {
-			filestream = new FileInputStream("dayConfig.properties");
+			filestream = new FileInputStream("DayConfig.properties");
 		} catch (FileNotFoundException e1) {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
@@ -85,7 +85,7 @@ public class StartSimulation {
 		providence.setRequestOfLecture(day);
 		
 		PrintText.clearScreen();
-		PrintText.printCurrentState();
+		PrintText.printCurrentState(day);
 		PrintText.printInputCommendText();//명령받는 텍스트 출력
 		
 		commendNum=-1;
@@ -111,7 +111,7 @@ public class StartSimulation {
 			
 			
 			PrintText.clearScreen();
-			PrintText.printCurrentState();
+			PrintText.printCurrentState(day);
 			PrintText.printInputCommendText();//명령받는 텍스트 출력
 			
 			

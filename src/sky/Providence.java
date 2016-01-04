@@ -114,12 +114,14 @@ public class Providence {
 			numberOfBusySeason = 12;
 		}
 		
+		int tempCount=0;
+		
 		if(numberOfBusySeason != 0){
 			int season = (int)(Math.random()*12) + 1;//1~12까지 변수
 			busySeasons.add(season);
 		}
 		
-		if(numberOfBusySeason !=1){
+		if(numberOfBusySeason > 1){
 			for(int i =0; i<numberOfBusySeason; i++){
 				int season = (int)(Math.random()*12) + 1;//1~12까지 변수
 				boolean isDuplication = false;
@@ -131,15 +133,21 @@ public class Providence {
 				}
 				
 				if(isDuplication){
-					busySeasons.remove(i);
 					i--;
 					continue;
 				}
-				busySeasons.add(season);
 				
+				if(busySeasons.size()==13){
+					break;
+				}
+				
+				busySeasons.add(season);
+				tempCount++;
 			}
+			busySeasons.remove(tempCount);//하나가 더 담겨서 마지막에 없앰
 		}
-//f		정해진 개수만큼 중복되지 않은 임의의 순자를 배열에 담는 방법
+		
+//		정해진 개수만큼 중복되지 않은 임의의 순자를 배열에 담는 방법
 		
  		differLogger.fine("END bestowSeasonState()");
 		
@@ -252,8 +260,16 @@ public class Providence {
 		int requestCriteriaForOrganization = (int)(providenceOfRequestCriteriaForOrganization.sample());
 		
 		for(int i = 0; i<customerOfDifferentation.size(); i++){
+			boolean isFitSeason= true;
 			if(customerOfDifferentation.get(i).getidentity().equals("Student")||customerOfDifferentation.get(i).getidentity().equals("GeneralIndividual")){
-				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){	//시즌에 안맞음
+				
+				for(int j = 0; j < customerOfDifferentation.get(i).getBusySeason().size();j++){
+					if(customerOfDifferentation.get(i).getBusySeason().get(j)==day.getMonth()){
+						isFitSeason = false;
+					}
+				}
+				
+				if(isFitSeason == false){	//시즌에 안맞음
 					differLoger.fine("One Busy Season of individual");
 					continue;
 				}else if(customerOfDifferentation.get(i).getIsPassedLecture()==true){	//강의를 이미 들음
@@ -268,7 +284,14 @@ public class Providence {
 					}
 				}
 			}else if(customerOfDifferentation.get(i).getidentity().equals("Company")){	//회사
-				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){	//시즌에 안맞음
+
+				for(int j = 0; j < customerOfDifferentation.get(i).getBusySeason().size();j++){
+					if(customerOfDifferentation.get(i).getBusySeason().get(j)==day.getMonth()){
+						isFitSeason = false;
+					}
+				}
+				
+				if(isFitSeason == false){	//시즌에 안맞음
 					differLoger.fine("One Busy Season of Company");
 					continue;
 				}else{
@@ -280,7 +303,13 @@ public class Providence {
 					}
 				}
 			}else if(customerOfDifferentation.get(i).getidentity().equals("University")){
-				if(customerOfDifferentation.get(i).getBusySeason().equals(day.getMonth())){
+				for(int j = 0; j < customerOfDifferentation.get(i).getBusySeason().size();j++){
+					if(customerOfDifferentation.get(i).getBusySeason().get(j)==day.getMonth()){
+						isFitSeason = false;
+					}
+				}
+				
+				if(isFitSeason == false){	//시즌에 안맞음				
 					differLoger.fine("One Busy Season of University");
 					continue;
 				}else{
@@ -465,7 +494,7 @@ public class Providence {
 		int amount = (int)normalDistributionOfChangeAmount.sample();
 		
 		for(int i=0; i<differentation.customerOfDifferentation.size(); i++){
-			int originalData = differentation.customerOfDifferentation.get(i).getNecessityOfSkill();
+			int originalData = differentation.customerOfDifferentation.get(i).getBudget();
 			differentation.customerOfDifferentation.get(i).changeBudget(originalData+amount);
 		}
 		
@@ -500,8 +529,8 @@ public class Providence {
 			differLogger.warning("IOException: " + e.getMessage());
 		}
 		
-		int averageAmountOfBudget = Integer.parseInt(properties.getProperty("AVERAGE_SET_AMOUNT_OF_BUDGET "));
-		int stdevAmountOfBudget = Integer.parseInt(properties.getProperty("STDEV_SET_AMOUNT_OF_BUDGET "));
+		int averageAmountOfBudget = Integer.parseInt(properties.getProperty("AVERAGE_SET_AMOUNT_OF_BUDGET"));
+		int stdevAmountOfBudget = Integer.parseInt(properties.getProperty("STDEV_SET_AMOUNT_OF_BUDGET"));
 		
 		NormalDistribution normalDistributionOfAmount = new NormalDistribution(averageAmountOfBudget, stdevAmountOfBudget);
 		budget = (int)normalDistributionOfAmount.sample();

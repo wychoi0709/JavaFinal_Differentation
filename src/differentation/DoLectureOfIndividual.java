@@ -39,6 +39,22 @@ public class DoLectureOfIndividual extends Decorator{
 		
 		int priceOfIndividualLecture = Integer.parseInt(properties.getProperty("INDIVIDUAL_LECTURE"));
 		
+		
+		try {
+			 filestream = new FileInputStream("InvestTimeStrategy.properties");
+		} catch (FileNotFoundException e1) {
+			differLogger.warning("FileNotFoundException: " + e1.getMessage());
+		}
+		
+		try {
+			properties.load(filestream);
+		}catch(IOException e) {
+			differLogger.warning("IOException: " + e.getMessage());
+		}
+		
+		int investedTimeOfIndividualLecture = Integer.parseInt(properties.getProperty("LECTURE_OF_INDIVIDUAL"));
+		
+		
 		for(int i =0; i<differentation.customerOfDifferentation.size(); i++){
 			if(differentation.customerOfDifferentation.get(i).getidentity().equals("Student")||
 					differentation.customerOfDifferentation.get(i).getidentity().equals("GeneralIndividual")){
@@ -51,6 +67,9 @@ public class DoLectureOfIndividual extends Decorator{
 					differentation.customerOfDifferentation.get(i).switchIsPassedLecture(); //강의를 들음
 					int totalRevenue = differentation.getTotalRevenue()+priceOfIndividualLecture;	//돈을 받음
 					differentation.setTotalRevenue(totalRevenue);	//총 수익에 더함
+
+					
+					differentation.setTotalInvestedTime(investedTimeOfIndividualLecture);
 				}
 			}
 		}

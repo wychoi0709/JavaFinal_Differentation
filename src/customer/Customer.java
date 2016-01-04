@@ -44,7 +44,7 @@ public abstract class Customer {
 		
 		if(requestOfLecture == true){
 			requestOfLecture = false;
-		}else if(requestOfLecture == false){
+		}else{
 			requestOfLecture = true;
 		}
 		
@@ -54,7 +54,7 @@ public abstract class Customer {
 		
 		if(isPassedLecture == true){
 			isPassedLecture = false;
-		}else if(isPassedLecture == false){
+		}else{
 			isPassedLecture = true;
 		}
 		
