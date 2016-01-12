@@ -101,7 +101,6 @@ public class PrintText {
 		System.out.println("||=================================||");//'=' 33°³
 		System.out.println("||=================================||");//'=' 33°³
 		System.out.println("=====================================");//'=' 33°³
-		System.out.println(" ");
 		
 	}
 

@@ -3,6 +3,7 @@ package startSimulation;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.Properties;
 import java.util.Scanner;
 
@@ -65,12 +66,27 @@ public class StartSimulation {
 		
 		PrintText.printStart();//시작 텍스트 출력
 		
-		int commendNum = s.nextInt();//1은 계속, 2는 종료
-		while(commendNum != 1&&commendNum != 2){
-			PrintText.printWrongNum();
-			PrintText.printStart();
-			commendNum = s.nextInt();//1은 계속, 2는 종료
-		}
+
+        boolean continueVar = true;
+		int commendNum = -1;
+		while (continueVar) {
+            try {
+                commendNum = s.nextInt();
+                if(commendNum != 1 && commendNum != 2){
+            		PrintText.printWrongNum();
+            		PrintText.printStart();
+                	continue;
+                }
+        		continueVar = false;
+            } catch (InputMismatchException i) {
+                PrintText.printWrongNum();
+                continueVar = true;
+                s.next();
+            }
+    		PrintText.printWrongNum();
+    		PrintText.printStart();
+        }
+
 		if(commendNum == 2){
 			PrintText.printEnd();//굿바이 텍스트 출력
 			//텍스트가 보이고 return되는지 확인할 것(안보이면 s.nextInt()라도 하나 넣기
@@ -90,7 +106,30 @@ public class StartSimulation {
 		
 		commendNum=-1;
 		while(commendNum != 0){
-			commendNum = s.nextInt();
+
+	        continueVar = true;
+			commendNum = -1;
+			while (continueVar) {
+	            try {
+	                commendNum = s.nextInt();
+	                if(commendNum != 1 && commendNum != 2 && commendNum != 3 && commendNum != 4 && commendNum != 5){
+	            		PrintText.clearScreen();
+	                	PrintText.printCurrentState(day);
+	                	PrintText.printInputCommendText();
+	                	continue;
+	                }
+	        		continueVar = false;
+	            } catch (InputMismatchException i) {
+	                PrintText.printWrongNum();
+	                continueVar = true;
+	                s.next();
+	            }
+	            PrintText.clearScreen();
+	    		PrintText.printCurrentState(day);
+	    		PrintText.printInputCommendText();
+	        }
+				
+			
 			if(commendNum == 1){
 				differentation.brandMarketing();
 			}else if(commendNum == 2){
