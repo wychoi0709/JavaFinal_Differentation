@@ -60,8 +60,9 @@ public class DoLectureOfCompany extends Decorator{
 					differentation.customerOfDifferentation.get(i).switchIsPassedLecture(); //강의를 들음
 					int totalRevenue = differentation.getTotalRevenue()+priceOfCompanyLecture;	//돈을 받음
 					differentation.setTotalRevenue(totalRevenue);	//총 수익에 더함
-					
 					differentation.setTotalInvestedTime(investedTimeOfCompanyLecture);
+					differentation.customerOfDifferentation.remove(i);//수업을 들은 고객은 없어짐
+					differentation.setRequestOfLectureFromCompany(-1);
 				}
 			}
 		}

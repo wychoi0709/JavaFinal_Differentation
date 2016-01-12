@@ -74,7 +74,7 @@ public class StartSimulation {
 		if(commendNum == 2){
 			PrintText.printEnd();//굿바이 텍스트 출력
 			//텍스트가 보이고 return되는지 확인할 것(안보이면 s.nextInt()라도 하나 넣기
-			return;//종료
+			System.exit(0);//종료
 		}
 		
 		//commendNum이 1인 경우

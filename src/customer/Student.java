@@ -17,9 +17,12 @@ public class Student extends Customer{
 
 	@Override
 	public void setBusySeason() {
-		Providence providence = Providence.getInstance();//하늘의 뜻 생성
-		
-		busySeason = providence.bestowSeasonState();
+		//Schedule of University(Seasons of Exam) Setting START
+		busySeason.add(4);	//1학기 중간고사
+		busySeason.add(6);	//1학기 기말고사
+		busySeason.add(10);	//2학기 중간고사
+		busySeason.add(12);	//2학기 기말고사
+		//Schedule of University(Seasons of Exam) Setting END
 	}
 
 	@Override

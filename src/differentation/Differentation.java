@@ -3,8 +3,6 @@ package differentation;
 import java.util.ArrayList;
 
 import customer.Customer;
-import logger.DifferLogger;
-import sky.Providence;
 
 public class Differentation {
 
@@ -105,39 +103,6 @@ public class Differentation {
 		this.isCoursePromotion = isCoursePromotion;
 	}
 	//Getter, Setter 선언 END
-
-
-	public void setRequestNumberOfLecture() {
-		DifferLogger differLogger = DifferLogger.getLogger();
-		
-		differLogger.fine("Start setRequestOfLecture()");
-		int requestOfLectureFromIndividual = 0;
-		int requestOfLectureFromCompany = 0;
-		int requestOfLectureFromUniversity = 0;
-		
-		for(int i = 0; i < customerOfDifferentation.size(); i++){
-			
-			//개인인지, 기업인지, 학교인지 파악해서 각각 해당하는 request 값을 하나씩 올려줄 것 START
-			if(customerOfDifferentation.get(i).getidentity()=="Student"||customerOfDifferentation.get(i).getidentity()=="GeneralIndividual"){
-				requestOfLectureFromIndividual++;
-			}else if(customerOfDifferentation.get(i).getidentity()=="Company"){
-				requestOfLectureFromCompany++;
-			}else if(customerOfDifferentation.get(i).getidentity()=="University"){
-				requestOfLectureFromUniversity++;
-			}
-			//개인인지, 기업인지, 학교인지 파악해서 각각 해당하는 request 값을 하나씩 올려줄 것 END
-		}
-		
-		differLogger.fine("Requests of lecture from individuals: "+ requestOfLectureFromIndividual);
-		differLogger.fine("Requests of lecture from companies: "+ requestOfLectureFromCompany);
-		differLogger.fine("Requests of lecture from universities: "+ requestOfLectureFromUniversity);
-		
-		this.setRequestOfLectureFromIndividual(requestOfLectureFromIndividual);
-		this.setRequestOfLectureFromCompany(requestOfLectureFromCompany);
-		this.setRequestOfLectureFromUniversity(requestOfLectureFromUniversity);
-		
-		differLogger.fine("End setRequestOfLecture()");
-	}
 	
 	public void brandMarketing(){
 		BrandMarketing brandMarketing = new BrandMarketing(new MarketingBuzz());

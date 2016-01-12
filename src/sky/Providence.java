@@ -371,27 +371,30 @@ public class Providence {
 		double averageIncrementOfIndividualCustomer = Double.parseDouble(properties.getProperty("AVERAGE_INCREMENT_OF_INDIVIDUAL_CUSTOMER"));
 		double stdevIncrementOfIndividualCustomer = Double.parseDouble(properties.getProperty("STDEV_INCREMENT_OF_INDIVIDUAL_CUSTOMER"));
 		
-		double averageIncrementOfOrganizationCustomer = Double.parseDouble(properties.getProperty("AVERAGE_INCREMENT_OF_ORGANIZATION_CUSTOMER"));
-		double stdevIncrementOfOrganizationCustomer = Double.parseDouble(properties.getProperty("STDEV_INCREMENT_OF_ORGANIZATION_CUSTOMER"));
+		double averageIncrementOfCompanyCustomer = Double.parseDouble(properties.getProperty("AVERAGE_INCREMENT_OF_COMPANY_CUSTOMER"));
+		double stdevIncrementOfCompanyCustomer = Double.parseDouble(properties.getProperty("STDEV_INCREMENT_OF_COMPANY_CUSTOMER"));
+		
+		double averageIncrementOfUniversityCustomer = Double.parseDouble(properties.getProperty("AVERAGE_INCREMENT_OF_UNIVERSITY_CUSTOMER"));
+		double stdevIncrementOfUniversityCustomer = Double.parseDouble(properties.getProperty("STDEV_INCREMENT_OF_UNIVERSITY_CUSTOMER"));
 		
 		double probabilityOfStudent = Double.parseDouble(properties.getProperty("PROBABILITY_OF_STUDENT"));
 		
 		NormalDistribution normalDistributionOfIndividualCustomer = new NormalDistribution(averageIncrementOfIndividualCustomer, stdevIncrementOfIndividualCustomer);
-		NormalDistribution normalDistributionOfOrganizationCustomer = new NormalDistribution(averageIncrementOfOrganizationCustomer, stdevIncrementOfOrganizationCustomer);
-
+		NormalDistribution normalDistributionOfCompanyCustomer = new NormalDistribution(averageIncrementOfCompanyCustomer, stdevIncrementOfCompanyCustomer);
+		NormalDistribution normalDistributionOfUniversityCustomer = new NormalDistribution(averageIncrementOfUniversityCustomer, stdevIncrementOfUniversityCustomer);
 		
 		int incrementOfIndividualCustomer = (int)
 				((normalDistributionOfIndividualCustomer.sample()*differentation.getReputationForIndividual())
 						*totalIndividualCustomer);
-		
 		int incrementOfCompanyCustomer = (int)
-				((normalDistributionOfOrganizationCustomer.sample()*differentation.getReputationForOrganization())
+				((normalDistributionOfCompanyCustomer.sample()*differentation.getReputationForOrganization())
 						*totalCompanyCustomer);
 		int incrementOfUniversityCustomer = (int)
-				((normalDistributionOfOrganizationCustomer.sample()*differentation.getReputationForOrganization())
+				((normalDistributionOfUniversityCustomer.sample()*differentation.getReputationForOrganization())
 						*totalUniversityCustomer);
+		
 		int incrementOfStudentCustomer = (int)(incrementOfIndividualCustomer* probabilityOfStudent);
-		int incrementOfGeneralIndividualCustomer = (int)(incrementOfIndividualCustomer* (1-probabilityOfStudent));		
+		int incrementOfGeneralIndividualCustomer = incrementOfIndividualCustomer - incrementOfStudentCustomer;
 
 		for(int i = 0; i < incrementOfCompanyCustomer; i++){
 			Customer company = new Company();
